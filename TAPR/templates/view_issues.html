@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block sub_header %}
+    <h2>View Issues</h2>
+{% endblock sub_header %}
+
+{% block content %}
+
+  {% for issue in issues %}
+  <h3>Issue no. {{ issue.id }} </h3>
+      <p>Issue regarding Team {{ issue.team_id }}</a></h3> </br>
+
+        <h3>Complaint submitted: </h3>
+          <p class = "pb-3">Complaint made by student {{ issue.applicant.first_name }} {{ issue.applicant.last_name }} with student ID number {{ issue.applicant_id }}.</p>
+         
+          <h3>Involving student </h3>
+          <!-- This should show which student the complaint is about but it doesn't work -->
+          <p class = "pt-3"> by {{ issue.students_involved }} 
+          <!-- end of code section that doesn't work -->
+            <h3>Type of issue: {{ issue.issue_type }}</h3>
+            <ul div id="issue-type">
+              <li>1: Unresponsive team members</li>  
+              <li>2: Issues of significant disagreement </li> 
+              <li>3: Bullying or harassment within the team </li> 
+              <li>4: Other</li> 
+            </ul>
+            </p>
+            <!-- <h3>Attempts to resolve </h3>
+          <p>{{ issue.attempts_resolve }}</p> -->
+          <h3>Description of issue </h3>
+          <p class = "pb-3">"{{ issue.issue_description }}"</p>
+
+        </div>
+        <hr class="rounded">
+      </div> 
+  {% endfor %}
+{% endblock content %}
