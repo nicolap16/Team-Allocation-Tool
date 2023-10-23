@@ -19,7 +19,7 @@ This project is code for a group project for Cardiff University. The aim was to 
 
 ## Getting Started
 
-To run locally, open Terminal and install requirements.txt and start a flask server (flask run)
+To run locally, open Terminal and install requirements.txt and start a flask server
 
 ## Usage
 
